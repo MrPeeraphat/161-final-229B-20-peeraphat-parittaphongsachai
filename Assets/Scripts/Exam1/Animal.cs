@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour
+public abstract class Animal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    protected string animalName = "";
+
+    public void Init(string animalName)
     {
-        
+        Debug.Log($"This is {animalName}");
+    }
+    public abstract float CalculateFoodRequirement();
+
+    public virtual void MakeSound()
+    {
+        Debug.Log($"The animal makes a sound");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayName()
     {
-        
+        Init(animalName);
+        MakeSound();
     }
 }

@@ -12,7 +12,9 @@ public class Bird : Animal
     public override float CalculateFoodRequirement()
     {
         Debug.Log($"{Name} eats {dailyFoodConsumtion} kg of food daily and weights {weight}");
-        return weight;
+        float birdRequirement;
+        birdRequirement = dailyFoodConsumtion * weight * 7;
+        return birdRequirement;
     }
 
     public override void MakeSound()

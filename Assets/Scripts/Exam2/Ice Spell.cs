@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceSpeel : MonoBehaviour
+public class IceSpeel : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Cast(string spellName)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        spellName = "Ice Shard";
+        Debug.Log($"Casting a {spellName} spell! Freeze the enemy!");
     }
 }
